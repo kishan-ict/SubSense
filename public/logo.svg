@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#022c22" />
+      <stop offset="50%" stop-color="#064e3b" />
+      <stop offset="100%" stop-color="#021c17" />
+    </linearGradient>
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34d399" />
+      <stop offset="50%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <linearGradient id="tealGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2dd4bf" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="16" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Squircle rounded background -->
+  <rect width="512" height="512" rx="128" fill="url(#bgGrad)" />
+  <rect width="504" height="504" x="4" y="4" rx="124" fill="none" stroke="#10b981" stroke-width="3" stroke-opacity="0.35" />
+
+  <!-- Geometric Subtle Radar / Sensing Rings -->
+  <circle cx="256" cy="256" r="190" fill="none" stroke="#10b981" stroke-width="1.5" stroke-dasharray="8 8" stroke-opacity="0.25" />
+  <circle cx="256" cy="256" r="140" fill="none" stroke="#14b8a6" stroke-width="1.5" stroke-opacity="0.2" />
+
+  <!-- Core Logo Emblem: Stylized Recurring Loop + Dynamic 'S' Sense Wave -->
+  <!-- Top Arch of Loop -->
+  <path d="M 180 180 C 180 130, 320 130, 340 185 C 348 206, 335 228, 305 240 L 210 272 C 175 285, 160 310, 172 335 C 190 380, 330 385, 340 330" 
+        fill="none" 
+        stroke="url(#emeraldGrad)" 
+        stroke-width="44" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"
+        filter="url(#glow)" />
+
+  <path d="M 180 180 C 180 130, 320 130, 340 185 C 348 206, 335 228, 305 240 L 210 272 C 175 285, 160 310, 172 335 C 190 380, 330 385, 340 330" 
+        fill="none" 
+        stroke="url(#emeraldGrad)" 
+        stroke-width="40" 
+        stroke-linecap="round" 
+        stroke-linejoin="round" />
+
+  <!-- Sensing / AI Pulse Nodes -->
+  <circle cx="340" cy="180" r="14" fill="#6ee7b7" />
+  <circle cx="172" cy="335" r="14" fill="#2dd4bf" />
+
+  <!-- Sparkling Sensing Star in Top Right -->
+  <path d="M 370 125 Q 370 145 390 145 Q 370 145 370 165 Q 370 145 350 145 Q 370 145 370 125 Z" fill="#6ee7b7" />
+</svg>

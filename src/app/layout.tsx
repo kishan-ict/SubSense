@@ -6,6 +6,13 @@ import { Footer } from "@/components/layout/Footer";
 export const metadata: Metadata = {
   title: "SubSense — Stop Paying for What You Don't Use",
   description: "AI-powered subscription management and recurring expense auditor. Find hidden price hikes, duplicate tools, and forgotten charges without linking your bank account.",
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico" }
+    ],
+    apple: "/logo.svg"
+  }
 };
 
 export default function RootLayout({

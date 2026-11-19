@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { ShieldCheck, Heart } from "lucide-react";
 
 export function Footer() {
@@ -11,9 +12,20 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-3 md:col-span-1">
-            <span className="text-lg font-bold text-slate-900 dark:text-white">
-              Sub<span className="text-emerald-500">Sense</span>
-            </span>
+            <Link href="/" className="inline-flex items-center gap-2.5 group">
+              <div className="relative h-8 w-8 rounded-lg overflow-hidden shadow-sm">
+                <Image
+                  src="/logo.svg"
+                  alt="SubSense Logo"
+                  width={32}
+                  height={32}
+                  className="h-full w-full object-cover"
+                />
+              </div>
+              <span className="text-lg font-bold text-slate-900 dark:text-white">
+                Sub<span className="text-emerald-500">Sense</span>
+              </span>
+            </Link>
             <p className="text-xs leading-relaxed text-slate-500 dark:text-slate-400">
               Stop paying for what you don&apos;t use. AI-powered subscription intelligence and recurring expense auditing with zero bank credential requirements.
             </p>

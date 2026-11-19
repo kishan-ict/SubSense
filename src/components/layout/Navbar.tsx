@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Sparkles, PieChart, UploadCloud, FileText, Lock } from "lucide-react";
+import { PieChart, UploadCloud, FileText, Lock } from "lucide-react";
 import { Suspense } from "react";
 
 function NavLinks() {
@@ -43,15 +44,22 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-slate-200/80 bg-white/90 backdrop-blur-md dark:border-slate-800 dark:bg-slate-950/90 transition-colors">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link href="/" className="flex items-center gap-2.5 group">
-          <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-tr from-emerald-600 to-teal-500 text-white shadow-md shadow-emerald-500/20 group-hover:scale-105 transition-transform">
-            <Sparkles className="h-5 w-5" />
+        <Link href="/" className="flex items-center gap-3 group">
+          <div className="relative flex h-10 w-10 items-center justify-center rounded-xl overflow-hidden shadow-md shadow-emerald-500/20 group-hover:scale-105 group-hover:shadow-emerald-500/30 transition-all">
+            <Image
+              src="/logo.svg"
+              alt="SubSense Logo"
+              width={40}
+              height={40}
+              className="h-full w-full object-cover"
+              priority
+            />
           </div>
           <div className="flex flex-col">
-            <span className="text-xl font-bold tracking-tight text-slate-900 dark:text-white">
+            <span className="text-xl font-extrabold tracking-tight text-slate-900 dark:text-white flex items-center">
               Sub<span className="text-emerald-500">Sense</span>
             </span>
-            <span className="text-[10px] font-medium tracking-wider uppercase text-slate-400 dark:text-slate-500 -mt-1">
+            <span className="text-[10px] font-semibold tracking-wider uppercase text-slate-400 dark:text-slate-500 -mt-1">
               Expense Auditor
             </span>
           </div>
